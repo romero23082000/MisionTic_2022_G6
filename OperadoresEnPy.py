@@ -1,0 +1,13 @@
+# trabajo con strings
+print("Manejo de informacion de entrada con python")
+print("-------------")
+print("Hola soy un robot y quiero hacerte unas preguntas")
+print("¿Como te llamas?")
+nombre = input("inserte su nombre--:")
+print("hola " + nombre, end="**" + " es un placer conocerte")
+apellido = input("Inserte su apellido--:")
+print("me gusta ese apellido " + apellido, end="**")
+comidaFav = input("Inserte su comida favorita--: ")
+print("no me gusta la " + comidaFav, end="**" + " la mia es la hamburguesa")
+colorFav = input("Inserte su color favorito--: ")
+print("tambien me gusta el color " + colorFav, end="**")
