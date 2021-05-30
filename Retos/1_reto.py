@@ -1,32 +1,26 @@
+# Pedir datos
+salario1, cantHoras1, bonificacion1 = input().split()
+# Calculo del valor de la hora
+valor_hora = float(float(salario1)/190)
 
-
-salario_base = float(input("ingrese su salario:"))
-print("Ingrese sus horas extra. Coloque 0 si no tuvo horas extra: ")
-cantidad_horas = int(input("ingrese el numero de horas extra"))
-print("Coloque 1 si tuvo bonificaciones. Coloque 0 si no tuvo bonificaciones: ")
-bonificaciones = int(input("notificaciones"))
-
-valor_hora = float(salario_base/190)
-
-
-if cantidad_horas == 0:
+# Proceso de cantidad de horas
+if int(cantHoras1) == 0:
     calcHorasExtra = 0
 else:
-    calcHorasExtra = float((valor_hora * 0.34) + valor_hora)*cantidad_horas
-
-if bonificaciones == 1:
-    calBonificacion = float(salario_base*0.061)
+    calcHorasExtra = float((valor_hora * 0.34) + valor_hora)*int(cantHoras1)
+#  Proceso de bonificaciones
+if int(bonificacion1) == 1:
+    calBonificacion = float(float(salario1)*0.061)
 else:
     calBonificacion = 0
-
+# Salario total del empleado
 salario_total = round(
-    float(salario_base + calBonificacion + calcHorasExtra), 1)
-
+    float(float(salario1) + calBonificacion + calcHorasExtra), 1)
+# Descuentos al salario total
 planSalud = float(0.01 * salario_total)
 pension = float(0.01 * salario_total)
 compensacion = float(0.01 * salario_total)
 salarioConDescuento = round(
     salario_total-(compensacion + planSalud + pension), 1)
-
-
-print(salario_total, salarioConDescuento)
+# Resultados del salario total y del salario con descuento
+resultado = print(salario_total, salarioConDescuento)
